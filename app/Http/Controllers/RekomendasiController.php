@@ -122,7 +122,7 @@ class RekomendasiController extends RestController
     public function destroy($id)
     {
         try {
-            $rekomendasi=Rekomendasi::find($id);
+            
             $rekomendasi->delete();
             return response()->json('Success',200);
         } catch (ModelNotFoundException $e) {
