@@ -23,7 +23,7 @@ class RekomendasiController extends RestController
     {
         $rekomendasi = Rekomendasi::all();
         $response = $this->generateCollection($rekomendasi);
-        return $this->sendResponse($response);
+        
     }
 
     /**
