@@ -44,23 +44,9 @@ class RekomendasiController extends RestController
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'message' => 'required',
-        ]);   
-
-        try {
-                $rekomendasi = new Rekomendasi;
-                $rekomendasi->message=$request->get('message');
-                $motors->save();
-
-
-                $response = $this->generateItem($rekomendasi);
-
-                return $this->sendResponse($response, 201);
-        } catch (\Exception $e) {
-            return $this->sendIseResponse($e->getMessage());
-        }
+       
     }
+    
 
     /**
      * Display the specified resource.
@@ -70,15 +56,7 @@ class RekomendasiController extends RestController
      */
     public function show($id)
     {
-        try {
-            $rekomendasi=Rekomendasi::find($id);
-            $response = $this->generateItem($rekomendasi);
-            return $this->sendResponse($response);
-        } catch (ModelNotFoundException $e) {
-            return $this->sendNotFoundResponse('User not found');
-        } catch (\Exception $e) {
-            return $this->sendIseResponse($e->getMessage());
-        }
+        
     }
 
     /**

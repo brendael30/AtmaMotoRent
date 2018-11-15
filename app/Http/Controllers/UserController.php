@@ -211,4 +211,25 @@ class UserController extends RestController
 
     }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function addRek(Request $request,$id){
+        $this->validate($request,[
+            'message' => 'required',
+        ]);   
+
+        try {
+                $user=  User::find($id);
+                $rekomendasi = $user->rekomendasi()->create(['message'=>$request->get('message')]);
+                return response()->json('Rekomendasi Terkirim'); 
+        } catch (\Exception $e) {
+            return $this->sendIseResponse($e->getMessage());
+        }
+    }
+
 }

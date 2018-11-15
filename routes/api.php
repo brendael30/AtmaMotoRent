@@ -18,4 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resource('users','UserController');
+Route::resource('motors','MotorController');
+Route::resource('rekomendasis','RekomendasiController');
 Route::post('login','UserController@login');
+Route::post('rekomendasi/{id}','UserController@addRek');
