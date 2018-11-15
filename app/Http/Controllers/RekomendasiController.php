@@ -101,7 +101,16 @@ class RekomendasiController extends RestController
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $rekomendasi = Motor::find($id);
+            $rekomendasi->message=$request->get('message');
+            $motors->save();
+        }catch (ModelNotFoundException $e) {
+            return $this->sendNotFoundResponse('barang_not_found');
+        }
+        catch (\Exception $e) {
+            return $this->sendIseResponse($e->getMessage());
+        }
     }
 
     /**
@@ -112,6 +121,14 @@ class RekomendasiController extends RestController
      */
     public function destroy($id)
     {
-        //
+        try {
+            $rekomendasi=Rekomendasi::find($id);
+            $rekomendasi->delete();
+            return response()->json('Success',200);
+        } catch (ModelNotFoundException $e) {
+            return $this->sendNotFoundResponse('user_not_found');
+        } catch (\Exception $e) {
+            return $this->sendIseResponse($e->getMessage());
+        }
     }
 }

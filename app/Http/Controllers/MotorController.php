@@ -141,7 +141,7 @@ class MotorController extends RestController
             $motors->gambar=$request->get('gambar');
             $motors->save();            
         }catch (ModelNotFoundException $e) {
-            return $this->sendNotFoundResponse('barang_not_found');
+            return $this->sendNotFoundResponse('motor_not_found');
         }
         catch (\Exception $e) {
             return $this->sendIseResponse($e->getMessage());
