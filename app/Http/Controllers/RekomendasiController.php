@@ -2,24 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;            return $this->sendNotFoundResponse('barang_not_found');
-        }
-        source from (\Exception $e) {
-            return $this->sendIseResponse($e->getMessage());
-        }
-    }
-
-    /**
-     * Remov storage.
- specified re
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Rekomendasi;
-use Illuminate     *
-     *se Illuminate\Support\F * Remove the specified resource from storage.
-     *
-     * * Remove the specified  *
-     *urce from storage.
-se Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -27,15 +13,7 @@ use App\Transformers\RekomendasiTransformers;
 
 class RekomendasiController extends RestController
 {
-inate\Htptp\Responseint
-     */
-
-     * @returublic functiparam  int  $id
-     * @return \Illu)
-    {
-        try {
-            
-ted $transformer=RekomendasiTransformers::class;
+    protected $transformer=RekomendasiTransformers::class;
     /**
      * Display a listing of the resource.
      *
@@ -58,30 +36,7 @@ ted $transformer=RekomendasiTransformers::class;
         //
     }
 
-n \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        try {
-            
-lluminate\Http\R            return $this->sendNotFoundResponse('barang_not_found');
-        }
-        catch (\Exception $e) {
-            return $this->sendIseResponse($e->getMessage());
-        }
-    }
-
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        try {
-            
-   /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -90,7 +45,7 @@ lluminate\Http\R            return $this->sendNotFoundResponse('barang_not_found
     public function store(Request $request)
     {
         $this->validate($request,[
-          'message' => 'required',
+            'message' => 'required',
         ]);   
 
         try {
@@ -113,7 +68,7 @@ lluminate\Http\R            return $this->sendNotFoundResponse('barang_not_found
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    publ function show($id)
+    public function show($id)
     {
         try {
             $rekomendasi=Rekomendasi::find($id);
@@ -124,4 +79,56 @@ lluminate\Http\R            return $this->sendNotFoundResponse('barang_not_found
         } catch (\Exception $e) {
             return $this->sendIseResponse($e->getMessage());
         }
-   /**
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        try {
+            $rekomendasi = Motor::find($id);
+            $rekomendasi->message=$request->get('message');
+            $motors->save();
+        }catch (ModelNotFoundException $e) {
+            return $this->sendNotFoundResponse('rekomendasi not found');
+        }
+        catch (\Exception $e) {
+            return $this->sendIseResponse($e->getMessage());
+        }
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        try {
+            $rekomendasi=Rekomendasi::find($id);
+            $rekomendasi->delete();
+            return response()->json('Success',200);
+        } catch (ModelNotFoundException $e) {
+            return $this->sendNotFoundResponse('user_not_found');
+        } catch (\Exception $e) {
+            return $this->sendIseResponse($e->getMessage());
+        }
+    }
+}
