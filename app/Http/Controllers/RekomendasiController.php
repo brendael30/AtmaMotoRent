@@ -2,10 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request;            return $this->sendNotFoundResponse('barang_not_found');
+        }
+        source from (\Exception $e) {
+            return $this->sendIseResponse($e->getMessage());
+        }
+    }
+
+    /**
+     * Remov storage.
+ specified re
 use App\Http\Controllers\Controller;
 use App\Rekomendasi;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate     *
+     *se Illuminate\Support\F * Remove the specified resource from storage.
+     *
+     * * Remove the specified  *
+     *urce from storage.
+se Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -13,7 +27,15 @@ use App\Transformers\RekomendasiTransformers;
 
 class RekomendasiController extends RestController
 {
-    protected $transformer=RekomendasiTransformers::class;
+inate\Htptp\Responseint
+     */
+
+     * @returublic functiparam  int  $id
+     * @return \Illu)
+    {
+        try {
+            
+ted $transformer=RekomendasiTransformers::class;
     /**
      * Display a listing of the resource.
      *
@@ -36,7 +58,30 @@ class RekomendasiController extends RestController
         //
     }
 
+n \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        try {
+            
+lluminate\Http\R            return $this->sendNotFoundResponse('barang_not_found');
+        }
+        catch (\Exception $e) {
+            return $this->sendIseResponse($e->getMessage());
+        }
+    }
+
     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        try {
+            
+   /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -45,7 +90,7 @@ class RekomendasiController extends RestController
     public function store(Request $request)
     {
         $this->validate($request,[
-            'message' => 'required',
+          'message' => 'required',
         ]);   
 
         try {
@@ -68,7 +113,7 @@ class RekomendasiController extends RestController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    publ function show($id)
     {
         try {
             $rekomendasi=Rekomendasi::find($id);
@@ -79,56 +124,4 @@ class RekomendasiController extends RestController
         } catch (\Exception $e) {
             return $this->sendIseResponse($e->getMessage());
         }
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        try {
-            $rekomendasi = Motor::find($id);
-            $rekomendasi->message=$request->get('message');
-            $motors->save();
-        }catch (ModelNotFoundException $e) {
-            return $this->sendNotFoundResponse('barang_not_found');
-        }
-        catch (\Exception $e) {
-            return $this->sendIseResponse($e->getMessage());
-        }
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        try {
-            
-            $rekomendasi->delete();
-            return response()->json('Success',200);
-        } catch (ModelNotFoundException $e) {
-            return $this->sendNotFoundResponse('user_not_found');
-        } catch (\Exception $e) {
-            return $this->sendIseResponse($e->getMessage());
-        }
-    }
-}
+   /**
