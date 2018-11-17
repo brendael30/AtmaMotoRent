@@ -35,8 +35,8 @@ class TransaksiController extends Controller
     public function store(Request $request)
     {
         Transaksi::create([
-            'id_motor' => $request->id_motor
-        ])
+            'id_motor' =>  $request->id_motor
+        ]);
     }
 
     /**
