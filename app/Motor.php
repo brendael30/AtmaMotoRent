@@ -12,4 +12,9 @@ class Motor extends Model
     protected $fillable=[
         'plat','nama_motor','status','deskripsi','harga','gambar'
     ];
+
+    public function transaksi()
+    {
+        return $this->belongsTo(Transaksi::class, 'id_motor');
+    }
 }

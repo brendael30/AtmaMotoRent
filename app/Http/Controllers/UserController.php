@@ -225,7 +225,9 @@ class UserController extends RestController
 
         try {
                 $user=  User::find($id);
-                $rekomendasi = $user->rekomendasi()->create(['message'=>$request->get('message')]);
+                $rekomendasi = $user->rekomendasi()->create([
+                    'message'=>$request->get('message')
+                ]);
                 return response()->json('Rekomendasi Terkirim'); 
         } catch (\Exception $e) {
             return $this->sendIseResponse($e->getMessage());

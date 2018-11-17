@@ -14,6 +14,6 @@ class Rekomendasi extends Model
     ];
 
     public function user(){
-        return $this->belongTo('App\User','id_user');
+        return $this->belongsTo('App\User','id_user');
     }
 }

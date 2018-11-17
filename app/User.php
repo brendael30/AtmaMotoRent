@@ -16,5 +16,9 @@ class User extends Model
     public function rekomendasi(){
         return $this->hasMany('App\Rekomendasi','id_user');
     }
-}
 
+    public function transaksi()
+    {
+        return $this->hasOne(Transaksi::class, 'fk')
+    }
+}
