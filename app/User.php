@@ -19,6 +19,6 @@ class User extends Model
 
     public function transaksi()
     {
-        return $this->hasOne(Transaksi::class, 'fk')
+        return $this->hasOne(Transaksi::class, 'fk');
     }
 }
