@@ -4,16 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Rekomendasi;
+use App\Transaksi_temp;
+use App\Motor;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use App\Transformers\RekomendasiTransformers;
+use App\Transformers\Transaksi_tempTransformers;
 
-class RekomendasiController extends RestController
+class Transaksi_tempController extends RestController
 {
-    protected $transformer=RekomendasiTransformers::class;
     /**
      * Display a listing of the resource.
      *
@@ -21,8 +21,8 @@ class RekomendasiController extends RestController
      */
     public function index()
     {
-        $rekomendasi = Rekomendasi::all();
-        $response = $this->generateCollection($rekomendasi);
+        $transaksi_temps = Transaksi_temp::all();
+        $response = $this->generateCollection($transaksi_temps);
         return $this->sendResponse($response);
     }
 
@@ -44,9 +44,16 @@ class RekomendasiController extends RestController
      */
     public function store(Request $request)
     {
-       
+        Transaksi::create([
+            'id_motor' =>  $request->id_motor,
+            'tanggal' =>  $request->tanggal,
+            'jumlah' =>  $request->jumlah,
+            'total_harga' =>  $request->total_harga,
+            'fk' =>  $request->fk,
+        ]);
+        $motors = new Motor;
+        $motors->status='unAvailable';
     }
-    
 
     /**
      * Display the specified resource.
@@ -56,7 +63,7 @@ class RekomendasiController extends RestController
      */
     public function show($id)
     {
-        
+        //
     }
 
     /**
@@ -79,16 +86,7 @@ class RekomendasiController extends RestController
      */
     public function update(Request $request, $id)
     {
-        try {
-            $rekomendasi = Motor::find($id);
-            $rekomendasi->message=$request->get('message');
-            $rekomendasi->save();
-        }catch (ModelNotFoundException $e) {
-            return $this->sendNotFoundResponse('rekomendasi not found');
-        }
-        catch (\Exception $e) {
-            return $this->sendIseResponse($e->getMessage());
-        }
+        //
     }
 
     /**
@@ -99,14 +97,6 @@ class RekomendasiController extends RestController
      */
     public function destroy($id)
     {
-        try {
-            $rekomendasi=Rekomendasi::find($id);
-            $rekomendasi->delete();
-            return response()->json('Success',200);
-        } catch (ModelNotFoundException $e) {
-            return $this->sendNotFoundResponse('user_not_found');
-        } catch (\Exception $e) {
-            return $this->sendIseResponse($e->getMessage());
-        }
+        //
     }
 }

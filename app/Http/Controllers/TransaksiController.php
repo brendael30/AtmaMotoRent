@@ -3,8 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Transaksi;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use App\Transformers\TransaksiTransformers;
 
-class TransaksiController extends Controller
+class TransaksiController extends RestController
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +20,9 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        //
+        $transaksis = Transaksi::all();
+        $response = $this->generateCollection($transaksis);
+        return $this->sendResponse($response);
     }
 
     /**
@@ -34,9 +43,7 @@ class TransaksiController extends Controller
      */
     public function store(Request $request)
     {
-        Transaksi::create([
-            'id_motor' =>  $request->id_motor
-        ]);
+        
     }
 
     /**
@@ -81,6 +88,14 @@ class TransaksiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            $transaksis=Transaksi::find($id);
+            $transaksis->delete();
+            return response()->json('Success',200);
+        } catch (ModelNotFoundException $e) {
+            return $this->sendNotFoundResponse('user_not_found');
+        } catch (\Exception $e) {
+            return $this->sendIseResponse($e->getMessage());
+        }
     }
 }

@@ -15,6 +15,6 @@ class Motor extends Model
 
     public function transaksi()
     {
-        return $this->belongsTo(Transaksi::class, 'id_motor');
+        return $this->belongsTo(Transaksi_temp::class, 'id_motor');
     }
 }
