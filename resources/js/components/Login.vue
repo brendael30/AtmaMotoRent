@@ -6,12 +6,6 @@
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
 				<form class="login100-form validate-form" name="form1" method="post" action="ceklogin.php">
-					
-					
-					
-					
-					
-					
 					<span class="login100-form-title p-b-33">
 						Log In 
 					</span>
@@ -39,10 +33,13 @@
 						<span class="txt1">
 							Create an account?
 						</span>
+                        
+                        <router-link to="/register">
+                            <a href="" class="txt2 hov1">
+                                Sign up
+                            </a>
+                        </router-link>
 
-						<a href="register.php" class="txt2 hov1">
-							Sign up
-						</a>
 					</div>
 					
 					<div class="text-center p-t-45 p-b-4">
