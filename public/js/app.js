@@ -14454,7 +14454,478 @@ var staticRenderFns = [
             )
           ])
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _c("section", { attrs: { id: "portfolio" } }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-12 text-center" }, [
+              _c("h2", { staticClass: "section-heading text-uppercase " }, [
+                _vm._v("List Motor")
+              ]),
+              _vm._v(" "),
+              _c("h3", { staticClass: "section-subheading text-muted" }, [
+                _vm._v("Beberapa Motor terlaris")
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-4 col-sm-6 portfolio-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "portfolio-link",
+                  attrs: { "data-toggle": "modal", href: "#portfolioModal1" }
+                },
+                [
+                  _c("div", { staticClass: "portfolio-hover" }, [
+                    _c("div", { staticClass: "portfolio-hover-content" }, [
+                      _c("i", { staticClass: "fas fa-plus fa-3x" })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: { src: "Motor/hondamegapro.jpg", alt: "" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "portfolio-caption" }, [
+                _c("h4", [_vm._v("Sewa Motor")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-muted" }, [
+                  _vm._v("Honda Mega Pro")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-4 col-sm-6 portfolio-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "portfolio-link",
+                  attrs: { "data-toggle": "modal", href: "#portfolioModal2" }
+                },
+                [
+                  _c("div", { staticClass: "portfolio-hover" }, [
+                    _c("div", { staticClass: "portfolio-hover-content" }, [
+                      _c("i", { staticClass: "fas fa-plus fa-3x" })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: { src: "Motor/suzukitu250x.jpg", alt: "" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "portfolio-caption" }, [
+                _c("h4", [_vm._v("Sewa Motor")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-muted" }, [_vm._v("suzukitu250x")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-4 col-sm-6 portfolio-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "portfolio-link",
+                  attrs: { "data-toggle": "modal", href: "#portfolioModal3" }
+                },
+                [
+                  _c("div", { staticClass: "portfolio-hover" }, [
+                    _c("div", { staticClass: "portfolio-hover-content" }, [
+                      _c("i", { staticClass: "fas fa-plus fa-3x" })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: { src: "gambar/hondaScoopy.jpg", alt: "" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "portfolio-caption" }, [
+                _c("h4", [_vm._v("Sewa Motor")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-muted" }, [_vm._v("Honda Scoopy")])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("section", { attrs: { id: "about" } }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-12 text-center" }, [
+              _c("h2", { staticClass: "section-heading text-uppercase" }, [
+                _vm._v("About")
+              ]),
+              _vm._v(" "),
+              _c("h3", { staticClass: "section-subheading text-muted" }, [
+                _vm._v("Pinjaman Motor terpercaya sejak dulu")
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-12" }, [
+              _c("ul", { staticClass: "timeline" }, [
+                _c("li", [
+                  _c("div", { staticClass: "timeline-image" }, [
+                    _c("img", {
+                      staticClass: "rounded-circle img-fluid",
+                      attrs: { src: "gambar/x.jpg", alt: "" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "timeline-panel" }, [
+                    _c("div", { staticClass: "timeline-heading" }, [
+                      _c("h4", [_vm._v("Call us if you have problem")]),
+                      _vm._v(" "),
+                      _c("h4", { staticClass: "subheading" }, [
+                        _vm._v("contact person")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "timeline-body" }, [
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(" Email : ")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(" atmamotorent@photographermuda.com ")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(" Phone : ")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(" 081271142541 ")
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "timeline-inverted" }, [
+                  _c("div", { staticClass: "timeline-image" }, [
+                    _c("img", {
+                      staticClass: "rounded-circle img-fluid",
+                      attrs: { src: "gambar/y.jpg", alt: "" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "timeline-panel" }, [
+                    _c("div", { staticClass: "timeline-heading" }, [
+                      _c("h4", [_vm._v("Location")]),
+                      _vm._v(" "),
+                      _c("h4", { staticClass: "subheading" })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "timeline-body" }, [
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(" (-) Yogyakarta")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(" (-) Jakarta")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(" (-) Yogyakarta")
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("div", { staticClass: "timeline-image" }, [
+                    _c("img", {
+                      staticClass: "rounded-circle img-fluid",
+                      attrs: { src: "gambar/z.jpg", alt: "" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "timeline-panel" }, [
+                    _c("div", { staticClass: "timeline-heading" }, [
+                      _c("h4"),
+                      _vm._v(" "),
+                      _c("h4", { staticClass: "subheading" }, [_vm._v("Moto")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "timeline-body" }, [
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(
+                          "kami dibentuk untuk mempermudah kalian dalam penyewaan motor"
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "timeline-inverted" }, [
+                  _c("div", { staticClass: "timeline-image" }, [
+                    _c("h4", [
+                      _vm._v("Be Part\n                  "),
+                      _c("br"),
+                      _vm._v("Of Our\n                  "),
+                      _c("br"),
+                      _vm._v("Story!")
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("footer", [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-4" }, [
+              _c("span", { staticClass: "copyright" }, [
+                _vm._v("Copyright © ATMAMOTORENT")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "portfolio-modal modal fade",
+          attrs: {
+            id: "portfolioModal1",
+            tabindex: "-1",
+            role: "dialog",
+            "aria-hidden": "true"
+          }
+        },
+        [
+          _c("div", { staticClass: "modal-dialog" }, [
+            _c("div", { staticClass: "modal-content" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "close-modal",
+                  attrs: { "data-dismiss": "modal" }
+                },
+                [
+                  _c("div", { staticClass: "lr" }, [
+                    _c("div", { staticClass: "rl" })
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-8 mx-auto" }, [
+                    _c("div", { staticClass: "modal-body" }, [
+                      _c("h2", { staticClass: "text-uppercase" }, [
+                        _vm._v("Honda Megapro")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "item-intro text-muted" }, [
+                        _vm._v("Yamaha semakin di depan")
+                      ]),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "img-fluid d-block mx-auto",
+                        attrs: { src: "Motor/hondamegapro.jpg", alt: "" }
+                      }),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Mesin 1000cc \n                  dan memiliki 240 horsepower menggunakan Torsi Maksimal 176KW\n                  transmisi yang digunakan Six-speed cassette-type gearbox with alternative gear ratios available\n                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "list-inline" }, [
+                        _c("li", [_vm._v("Tanggal Pembelian: January 2008")]),
+                        _vm._v(" "),
+                        _c("li", [_vm._v("Tipe Motor: Motor Sport Jadul")])
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { "data-dismiss": "modal", type: "button" }
+                        },
+                        [
+                          _c("i", { staticClass: "fas fa-times" }),
+                          _vm._v("\n                  TUTUP")
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "portfolio-modal modal fade",
+          attrs: {
+            id: "portfolioModal2",
+            tabindex: "-1",
+            role: "dialog",
+            "aria-hidden": "true"
+          }
+        },
+        [
+          _c("div", { staticClass: "modal-dialog" }, [
+            _c("div", { staticClass: "modal-content" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "close-modal",
+                  attrs: { "data-dismiss": "modal" }
+                },
+                [
+                  _c("div", { staticClass: "lr" }, [
+                    _c("div", { staticClass: "rl" })
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-8 mx-auto" }, [
+                    _c("div", { staticClass: "modal-body" }, [
+                      _c("h2", { staticClass: "text-uppercase" }, [
+                        _vm._v("Suzuki")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "item-intro text-muted" }, [
+                        _vm._v("Terdepan dan Terpercaya")
+                      ]),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "img-fluid d-block mx-auto",
+                        attrs: { src: "Motor/suzukitu250x.jpg", alt: "" }
+                      }),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Suzuki ini adalah motor jadul dengan kecepatan sedang dan sangat mudah digunakan"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "list-inline" }, [
+                        _c("li", [_vm._v("Tanggal Pembelian: febuary 2017")]),
+                        _vm._v(" "),
+                        _c("li", [_vm._v("Tipe Motor: Motor Jadul")])
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { "data-dismiss": "modal", type: "button" }
+                        },
+                        [
+                          _c("i", { staticClass: "fas fa-times" }),
+                          _vm._v("\n                  TUTUP")
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "portfolio-modal modal fade",
+          attrs: {
+            id: "portfolioModal3",
+            tabindex: "-1",
+            role: "dialog",
+            "aria-hidden": "true"
+          }
+        },
+        [
+          _c("div", { staticClass: "modal-dialog" }, [
+            _c("div", { staticClass: "modal-content" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "close-modal",
+                  attrs: { "data-dismiss": "modal" }
+                },
+                [
+                  _c("div", { staticClass: "lr" }, [
+                    _c("div", { staticClass: "rl" })
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-8 mx-auto" }, [
+                    _c("div", { staticClass: "modal-body" }, [
+                      _c("h2", { staticClass: "text-uppercase" }, [
+                        _vm._v("Honda Scoppy")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "item-intro text-muted" }, [
+                        _vm._v("Matic dan mudah diguanakan")
+                      ]),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "img-fluid d-block mx-auto",
+                        attrs: { src: "gambar/hondaScoopy.jpg", alt: "" }
+                      }),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "honda scoopy ini mudah digunakan dan irit bahan bakar"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "list-inline" }, [
+                        _c("li", [_vm._v("Tanggal Pembelian: January 2016")]),
+                        _vm._v(" "),
+                        _c("li", [_vm._v("Tipe Motor : Motor Matic")])
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { "data-dismiss": "modal", type: "button" }
+                        },
+                        [
+                          _c("i", { staticClass: "fas fa-times" }),
+                          _vm._v("\n                  TUTUP")
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]
+      )
     ])
   }
 ]
