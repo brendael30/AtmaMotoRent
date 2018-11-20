@@ -1,0 +1,63 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/template-overviews/shop-homepage)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+
+body {
+  background-color: #ebe7e0;
+  height:100%;
+  margin:0;
+ 
+}
+
+.imageShow{
+  width: 100%;
+  margin-top: 100px;
+}
+
+.container-fluid{
+  margin-top: 50px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.logo{
+  position:relative;
+  top: -3px;
+  left:-10px;
+  width:30px;
+  max-width: -50%;
+}
+
+.gambar{
+  position:relative;
+  right:170px;
+  max-width: 250%;
+}
+.img-top{
+  height: 200px;
+}
+.cRight{
+  position: absolute;;
+  left:760px;
+}
+
+.gambar2{
+  position:relative;
+  right:170px;
+}
+
+footer{
+
+  position: relative;
+  left:0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  
+}
