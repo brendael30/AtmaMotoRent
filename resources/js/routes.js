@@ -1,5 +1,6 @@
 import App from './components/App'
 import Index from './components/Index'
+import Login from './components/Login'
 // import User from './components/User/User'
 // import Admin from './components/Admin/Admin'
 
@@ -13,7 +14,8 @@ export const routes = [
     },
     {
         path: '/login',
-        redirect: '/'
+        name: 'login',
+        component: Login,
         
     },
 

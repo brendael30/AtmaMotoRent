@@ -14,9 +14,14 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="logo" href="#"></a>
-          <li class="nav-item">
+            </li>
+          <router-link to="/login">
+            <li class="nav-item">
             <a class="nav-link" href="">Login</a>
           </li>
+          </router-link>
+          
+
         </ul>
       </div>
     </div>

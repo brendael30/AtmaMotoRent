@@ -20,11 +20,11 @@ body {
   margin-top: 50px;
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
-}
+} */
 
 .logo{
   position:relative;
